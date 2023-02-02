@@ -4,7 +4,7 @@ public class TestEtudiant
 	{	
 		Etudiant e1 = new Etudiant ("Luke" ,"Skywalker" , 8.25);
 		Etudiant e2 = new Etudiant ("Leia" ,"Organa" , 11.75);
-		Etudiant z = new Etudiant ("Zoe" ,"Dominique" , Double.MAX_VALUE-Etudiant.SumNotes);
+		Etudiant z = new Etudiant ("Zoe" ,"Dominique" , Double.MAX_VALUE-Etudiant.SumNotes); // Je prefere Zoe a Martin.
 		System.out.println("nb d’etudiants : " + Etudiant.GetNbEtudiant());
 		System.out.println("somme des notes : " + Etudiant.SumNotes);
 	//	e1.afficher();
@@ -15,6 +15,8 @@ public class TestEtudiant
 	//	System.out.println(z.meilleurQueLaMoyenne());
 		z.modifierNote(16.);
 		z.afficher();
+		Trio tr = new Trio(e1,e2,z);
+		tr.premier().afficher();
 	}
 }
 /* REPONSES
