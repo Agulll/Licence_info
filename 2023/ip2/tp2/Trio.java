@@ -16,7 +16,7 @@ public class Trio {
 		return(e);
 	}
 
-	public Etudiant match(String Prenom,String Nom)
+	public Etudiant match(String Nom,String Prenom)
 	{
 		for (Etudiant x : this.membres){
 			if (x.nom.equals(Nom) && x.prenom.equals(Prenom))
@@ -28,7 +28,7 @@ public class Trio {
 		return (new Etudiant("","",-1));
 	}
 
-	public int Classement(String Prenom,String Nom)
+	public int classement(String Prenom,String Nom)
 	{
 		int pos = 3; 
 		Etudiant x = match(Prenom,Nom);
@@ -39,5 +39,15 @@ public class Trio {
 			}
 		}
 		return(pos);
+	}
+
+	public double moyenne()
+	{
+		return((this.membres[0].note+this.membres[1].note+this.membres[2].note)/3);
+	}
+
+	public boolean meilleurQueLaMoyenne()
+	{
+		return(this.moyenne()>Etudiant.moyenne());
 	}
 }

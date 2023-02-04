@@ -17,6 +17,13 @@ public class TestEtudiant
 		z.afficher();
 		Trio tr = new Trio(e1,e2,z);
 		tr.premier().afficher();
+		Etudiant x = tr.match("Luke","Skywalker");
+		x.afficher();
+		System.out.println(tr.classement("Luke","Skywalker"));
+		System.out.println(tr.classement("Lk","kwale"));
+		System.out.println(tr.moyenne());
+		System.out.println(tr.meilleurQueLaMoyenne());
+		System.out.println(Etudiant.moyenne());
 	}
 }
 /* REPONSES
