@@ -6,6 +6,8 @@ public class Test
 		TestUtilisateur(ut);
 		Message ms = new Message("Welcome Machine !",ut);
 		TestMessage(ms);
+		Salon Saloon = new Salon(10);
+		TestSalon(Saloon,ut,ms);
 	}
 	public static void TestUtilisateur(Utilisateur ut)
 	{
@@ -33,5 +35,15 @@ public class Test
 		System.out.println(ms.getMsg());
 		System.out.println("[Test getAuth]");
 		System.out.println(ms.getAuth().getPseudonyme());
+	}
+
+	public static void TestSalon(Salon sl,Utilisateur ut, Message ms)
+	{
+		System.out.println("[Test ajouterUtilisateur]");
+		System.out.println(sl.ajouterUtilisateur(ut));
+		System.out.println("[Test ajouterMessage]");
+		System.out.println(sl.ajouterMessage(ms));
+		System.out.println("[Test afficher]");
+		sl.afficher();
 	}
 }
