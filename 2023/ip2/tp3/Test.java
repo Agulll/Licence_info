@@ -1,8 +1,14 @@
 public class Test
 {
 	public static void main(String[] args)
-	{
+	{	
 		Utilisateur ut = new Utilisateur("Zoe","AAA","mail@mail.mail");
+		TestUtilisateur(ut);
+		Message ms = new Message("Welcome Machine !",ut);
+		TestMessage(ms);
+	}
+	public static void TestUtilisateur(Utilisateur ut)
+	{
 		System.out.println("[Test testMotDePasse : aaa,AAA]");
 		System.out.println(ut.testMotDePasse("aaa"));
 		System.out.println(ut.testMotDePasse("AAA"));
@@ -20,5 +26,12 @@ public class Test
 		System.out.println(ut.getPseudonyme());
 		ut.setPseudonyme("Zowey","BBB");
 		System.out.println(ut.getPseudonyme());
+	}
+	public static void TestMessage(Message ms)
+	{
+		System.out.println("[Test getMsg]");
+		System.out.println(ms.getMsg());
+		System.out.println("[Test getAuth]");
+		System.out.println(ms.getAuth().getPseudonyme());
 	}
 }
