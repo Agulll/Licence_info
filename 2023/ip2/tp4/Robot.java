@@ -27,4 +27,17 @@ public class Robot{
 	{
 		return this.nom;
 	}
+	public void chante()
+	{
+		if(this.energie-10>0)
+		{
+			String str = "";
+			for(int i = 0; i < (this.nom - 96);i++)
+			{
+				str+=this.texte;
+			}
+			this.energie-=10;
+			System.out.println(str);
+		}
+	}
 }
