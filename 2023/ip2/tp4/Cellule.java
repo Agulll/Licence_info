@@ -71,7 +71,7 @@ public class Cellule{
 		}
 		else if(this.suivant != null)
 		{
-			this.suivant.couperAPartirDe(nom);
+			return(this.suivant.couperAPartirDe(nom));
 		}
 		else
 		{

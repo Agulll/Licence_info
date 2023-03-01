@@ -1,5 +1,3 @@
-import javax.swing.GroupLayout.Group;
-
 public class Groupe{
 	private Cellule chefDeFile;
 	public Groupe()
@@ -81,15 +79,17 @@ public class Groupe{
 			System.out.println("Nothing in Band");
 		}
 	}
-
 	public Groupe couperAPartirDe(char nom)
 	{
 		if(this.chefDeFile != null)
 		{
 			Cellule c = this.chefDeFile.couperAPartirDe(nom);
-			Groupe g = new Group();
+			Groupe g = new Groupe(c);
 			return(g);
-		}//TODO::Fix this strange error
-		else return null;
+		}
+		else 
+		{
+			return null;
+		}
 	}
 }
