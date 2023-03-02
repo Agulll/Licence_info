@@ -21,5 +21,48 @@ public class Cellule
     {
         return(this.suivante);
     }
-
+    public String description()
+    {
+        if(this.suivante==null)
+        {
+            return(this.valeur+"]");
+        }
+        else
+        {
+            return(this.valeur+","+this.suivante.description());
+        }
+    } 
+    public int taille()
+    {
+        if(this.suivante==null)
+        {
+            return(1);
+        }
+        else
+        {
+            return(1+this.suivante.taille());
+        }
+    }
+    public int somme()
+    {
+        if(this.suivante==null)
+        {
+            return(this.valeur);
+        }
+        else
+        {
+            return(this.valeur+this.suivante.somme());
+        }
+    }
+    public boolean equals(Cellule argcell)
+    {
+        if(this.suivante==null || argcell.suivante == null)
+        {
+            return(this.valeur == argcell.valeur && this.suivante == argcell.suivante);
+        }
+        else
+        {
+            return(this.valeur == argcell.valeur && this.suivante.equals(argcell.suivante));
+        }
+    }
 }

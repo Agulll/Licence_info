@@ -1,6 +1,10 @@
 public class ListeDEntiers 
 {
     private Cellule premier;
+    public Cellule getCell()
+    {
+        return(this.premier);
+    }
     public ListeDEntiers(Cellule cell)
     {
         this.premier=cell;
@@ -13,4 +17,49 @@ public class ListeDEntiers
     {
         this.premier=cell;
     }
+    public String description()
+    {
+        if(this.premier==null)
+        {
+            return("la liste est vide");
+        }
+        else
+        {
+            return("["+this.premier.description());
+        }
+    } 
+    public int taille()
+    {
+        if(this.premier==null)
+        {
+            return(0);
+        }
+        else
+        {
+            return(this.premier.taille());
+        }
+    }
+    public int somme()
+    {
+        if(this.premier==null)
+        {
+            return(0);
+        }
+        else
+        {
+            return(this.premier.somme());
+        }
+    }
+    public boolean equals(ListeDEntiers arg)
+    {
+        if(this.premier == null || arg.getCell() == null)
+        {
+            return(this.premier == arg.getCell());
+        }
+        else
+        {
+            return(this.premier.equals(arg.getCell()));
+        }
+    }
+
 }
