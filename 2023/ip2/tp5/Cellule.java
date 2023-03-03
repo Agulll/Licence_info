@@ -75,7 +75,7 @@ public class Cellule
             }
             else
             {
-                this.suivante= new Cellule(null);
+                this.suivante= new Cellule(0);
                 this.suivante.ajouter_en_i(x,--i);
             }
         }

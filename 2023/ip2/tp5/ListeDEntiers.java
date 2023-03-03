@@ -72,8 +72,8 @@ public class ListeDEntiers
             this.premier.ajouter_en_i(x,i);
         }
     }
-    public boolean supprimer_en_i(int i)
-    {
+  //  public boolean supprimer_en_i(int i)
+  //  {
         
-    }
+  //  }
 }
