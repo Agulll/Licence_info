@@ -61,5 +61,15 @@ public class ListeDEntiers
             return(this.premier.equals(arg.getCell()));
         }
     }
-
+    public void ajouter_en_i(int x,int i)
+    {
+        if(this.premier == null)
+        {
+            this.add(new Cellule(x));
+        }
+        else
+        {
+            this.premier.ajouter_en_i(x,i);
+        }
+    }
 }

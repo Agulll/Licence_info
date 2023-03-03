@@ -65,4 +65,19 @@ public class Cellule
             return(this.valeur == argcell.valeur && this.suivante.equals(argcell.suivante));
         }
     }
+    public void ajouter_en_i(int x,int i)
+    {
+        if(this.suivante==null)
+        {
+            this.suivante= new Cellule(i);
+        }
+        else if (i<=0)
+        {
+            this.suivante= new Cellule(i,this.suivante);
+        }
+        else
+        {
+            this.suivante.ajouter_en_i(x,--i);
+        }
+    }
 }
