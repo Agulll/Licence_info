@@ -69,9 +69,17 @@ public class Cellule
     {
         if(this.suivante==null)
         {
-            this.suivante= new Cellule(i);
+            if(i<=0)
+            {
+                this.suivante= new Cellule(i);
+            }
+            else
+            {
+                this.suivante= new Cellule(null);
+                this.suivante.ajouter_en_i(x,--i);
+            }
         }
-        else if (i<=0)
+        else if(i<=0)
         {
             this.suivante= new Cellule(i,this.suivante);
         }
