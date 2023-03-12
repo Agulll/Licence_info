@@ -57,6 +57,44 @@ public class Salon
 		{
 			System.out.println(tabMessage[i].getAuth().getPseudonyme()+": "+tabMessage[i].getMsg());
 		}
+		System.out.println(">-------------------------------------------------------------------<");
 	}
 
+	public void ban(Utilisateur x)
+	{
+		for (int i = 0; i < indexLibreUtilisateur; i++)
+		{
+			if(tabUtilisateur[i]==x)
+			{
+				if(i==indexLibreUtilisateur-1)
+				{
+					tabUtilisateur[i]=null;
+				}
+				else
+				{
+					for (int j = i; j <= indexLibreUtilisateur; j++)
+					{	
+						tabUtilisateur[j]=tabUtilisateur[j+1];
+					}
+				tabUtilisateur[indexLibreUtilisateur-1] = null;
+				}
+			indexLibreUtilisateur--;
+			break;
+			}
+		}
+		for (int i = 0; i < indexLibreMessage;i++)
+		{
+			if(tabMessage[i].getAuth()==x)
+			{
+				if(i==indexLibreMessage-1)
+				{
+					tabMessage[i] = null;
+				}else{
+					tabMessage[i]=tabMessage[i+1];
+					i--;
+				}
+				indexLibreMessage--;
+			}
+		}
+	}
 }

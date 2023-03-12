@@ -41,9 +41,16 @@ public class Test
 	{
 		System.out.println("[Test ajouterUtilisateur]");
 		System.out.println(sl.ajouterUtilisateur(ut));
+		Utilisateur bob = new Utilisateur("Bob","qwerty","real@mail.mail");
+		sl.ajouterUtilisateur(bob);
 		System.out.println("[Test ajouterMessage]");
 		System.out.println(sl.ajouterMessage(ms));
+		Message messageDeBob = new Message("I'm Bob :D",bob);
+		sl.ajouterMessage(messageDeBob);
 		System.out.println("[Test afficher]");
+		sl.afficher();
+		System.out.println("[Test ban]");
+		sl.ban(ut);
 		sl.afficher();
 	}
 }
